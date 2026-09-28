@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "weather-ai-assistant"
+version = "0.1.0"
+description = "Weather services, GraphQL API and grounded conversational assistant."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "gradio>=5.0",
+  "httpx>=0.28",
+  "openai>=1.68",
+  "python-dotenv>=1.0",
+  "strawberry-graphql>=0.240",
+  "uvicorn>=0.30",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/weather_assistant"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
