@@ -79,7 +79,7 @@ The application can optionally query a compatible Boulder daily-weather CSV when
 
 The source CSV stores temperatures in Fahrenheit. The adapter converts them to Celsius so current and historical context do not silently mix units.
 
-The data file itself is not duplicated into the new project yet; its source and redistribution terms should be verified before the final standalone repository is created.
+The historical data file is not bundled with the repository; its source and redistribution terms should be verified before redistribution.
 
 ## Project structure
 
@@ -213,7 +213,7 @@ This first modernization pass implements the capability that the original Python
 
 Forecasting is deliberately not presented as implemented until a forecast provider is integrated and tested.
 
-## Next steps before standalone portfolio release
+## Next steps
 
 - add 5-day forecast support through a dedicated provider interface
 - cache weather responses by resolved location
